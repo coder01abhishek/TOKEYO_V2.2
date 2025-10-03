@@ -75,12 +75,12 @@ const LoaderWrapper = ({ children }: { children: React.ReactNode }) => {
 
         await Promise.race([
           Promise.allSettled([...imagePromises, ...videoPromises]),
-          new Promise(resolve => setTimeout(resolve, 3000)) 
+          new Promise(resolve => setTimeout(resolve, 1500))
         ]);
-        
+
         setTimeout(() => {
           setLoading(false);
-        }, 300); 
+        }, 200); 
 
       } catch (error) {
         setTimeout(() => {

@@ -23,12 +23,13 @@ const Hero: React.FC = () => {
             
             <div className="relative w-full sm:max-w-md max-w-sm">
                 <video
-                    src={("/videos/doll.mp4")} 
+                    src={("/videos/doll.mp4")}
                     autoPlay
                     loop
                     muted
                     playsInline
                     controls={false}
+                    preload="auto"
                     className="z-10 w-full sm:h-full h-90 object-contain"
                 />
 

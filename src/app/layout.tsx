@@ -11,6 +11,8 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -36,6 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" href="/videos/doll.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/assets/images/ainew.webp" as="image" type="image/webp" />
+        <link rel="dns-prefetch" href="https://4b7mwyeirrypbewg.public.blob.vercel-storage.com" />
+        <link rel="preconnect" href="https://4b7mwyeirrypbewg.public.blob.vercel-storage.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${inter.className} antialiased`}>
         <LoaderWrapper>
           <>
